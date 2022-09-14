@@ -122,7 +122,6 @@ showBooks(bookList);
 
 const addToCart = (id) => {
   cart.push(id);
-  console.log(id)
 };
 
 const addToWishlist = (id) => {
@@ -134,7 +133,6 @@ const addToWishlist = (id) => {
 const displayCart = () => {
   const cart = getCartItems();
   document.getElementById("cart").textContent = '';
-  // console.log(cart);
 
   cart.forEach((book) => {
     const div = createCard(book);
