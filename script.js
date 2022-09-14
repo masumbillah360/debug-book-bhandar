@@ -89,10 +89,11 @@ const showBooks = (books) => {
 
 const createCard = (book) => {
   const div = document.createElement("div");
-  console.log(book)
+  // console.log(book)
   div.classList.add("card");
 
   let overview = book.overview;
+  const fixedOverview = overview.length>60?overview.substring(0,60)+"...":overview;
 
   div.innerHTML = `
   <div class="image-container">
@@ -108,7 +109,7 @@ const createCard = (book) => {
   <div class="info-container">
     <h1>${book.name}</h1>
     <p>
-      ${overview}
+      ${fixedOverview}
     </p>
   </div>
 
