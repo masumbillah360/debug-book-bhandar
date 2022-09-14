@@ -133,7 +133,8 @@ const addToWishlist = (id) => {
 
 const displayCart = () => {
   const cart = getCartItems();
-  console.log(cart);
+  document.getElementById("cart").textContent = '';
+  // console.log(cart);
 
   cart.forEach((book) => {
     const div = createCard(book);
